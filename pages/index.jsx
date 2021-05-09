@@ -30,6 +30,8 @@ const Logo = styled.img`
   max-width: 400px;
   margin: 0 auto;
   display: block;
+  filter: invert(1);
+  mix-blend-mode: difference;
 `
 
 
