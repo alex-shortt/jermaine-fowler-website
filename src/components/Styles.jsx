@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 export const Header = styled.h3`
   font-family: sans-serif;
   margin: 4rem 0 10px;
+  color: white;
 `
 
 export const Section = styled.div`
@@ -17,7 +18,7 @@ export const Section = styled.div`
     content: "";
     height: calc(100% - 50px);
     width: 1px;
-    background: #666;
+    background: #e7e7e7;
     position: absolute;
     left: 2px;
     top: 0;
@@ -33,7 +34,7 @@ export const Section = styled.div`
     position: absolute;
     left: 2px;
     bottom: 0;
-    background-image: linear-gradient(to bottom, #333 20%, rgba(255, 255, 255, 0) 0%);
+    background-image: linear-gradient(to bottom, #e7e7e7 20%, rgba(255, 255, 255, 0) 0%);
     background-position: left;
     background-size: 2px 8px;
     background-repeat: repeat-y;
@@ -56,7 +57,7 @@ export const Section = styled.div`
 `
 
 export const Link = styled.a`
-  color: #666;
+  color: #f3f3f3;
   opacity: 0.8;
   transition: opacity 0.15s ease;
   
@@ -69,6 +70,7 @@ export const Source = styled.p`
   font-style: italic;
   margin: 5px 0;
   font-size: 0.9rem;
+  color: white;
 `
 
 export const Image = styled.img`

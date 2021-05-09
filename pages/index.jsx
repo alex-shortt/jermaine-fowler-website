@@ -2,7 +2,6 @@ import {useEffect} from "react"
 import GlobalStyles from "components/GlobalStyles"
 import styled from "@emotion/styled"
 import Interviews from "components/Interviews";
-import Photos from "components/Photos";
 import Head from "next/head";
 
 const Container = styled.div`
@@ -13,13 +12,17 @@ const Container = styled.div`
   margin: 0 auto;
 `
 
-const Title = styled.h1`
-  text-align: center;
-  font-size: 3rem;
-  
-  @media screen and (max-width: 900px) {
-    font-size: 2rem;
-  }
+const Background = styled.div`
+  z-index: -1;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://assets.mediated.world/jermaine/somber.jpg");
+  background-size: cover;
+  background-position: center center;
+  filter: brightness(0.7);
 `
 
 const Logo = styled.img`
@@ -38,15 +41,19 @@ created by alex shortt
         `)
     }, [])
 
-    return <Container>
-        <Head>
-            <title>Jermaine Fowler</title>
-        </Head>
-        <GlobalStyles/>
-        <Logo src="/jermainefowler-logo.png" />
-        <Interviews/>
-        <Photos/>
-    </Container>
+    return (
+    <>
+        <Container>
+            <Head>
+                <title>Jermaine Fowler</title>
+            </Head>
+            <GlobalStyles/>
+            <Logo src="/jermainefowler-logo.png" />
+            <Interviews/>
+        </Container>
+        <Background />
+    </>)
+
 }
 
 export default Page
