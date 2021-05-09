@@ -22,6 +22,13 @@ const Title = styled.h1`
   }
 `
 
+const Logo = styled.img`
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  display: block;
+`
+
 
 function Page() {
     useEffect(() => {
@@ -36,7 +43,7 @@ created by alex shortt
             <title>Jermaine Fowler</title>
         </Head>
         <GlobalStyles/>
-        <Title>Jermaine Fowler</Title>
+        <Logo src="/jermainefowler-logo.png" />
         <Interviews/>
         <Photos/>
     </Container>
